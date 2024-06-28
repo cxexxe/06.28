@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;}
+
+    html{ scroll-behavior: smooth;}
+/* 전체 */
+.container{
+    width: 100%;
+}
+ul li{
+    list-style: none;
+    float: left;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+body{
+    color: #fff;
+    background-color: #1E1E1E;
+}
+
+section{
+    height: 1080px;
+}
+.s_inner{
+    width: 1400px;
+    height: 1080px;
+    margin: 0 260px;
+/*     outline: solid 1px rgb(187, 0, 255); */
+    z-index: 2;
+}
+footer{
+    padding: 0 260px;
+    height: 300px;
+/*     outline: solid 1px rgb(111, 0, 255); */
+}
+
+i{
+    font-style: normal;
+}
+
+/* overlay */
+.wrapper{
+    display: none;
+    position: sticky;
+    top: -10px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: 93%;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.wrapper.active {
+    display: block;
+    clip-path: circle(75%);
+}
+
+.sitemap{
+    display: flex;
+    justify-content: space-between;
+    width: 1400px;
+    height: 1080px;
+    margin: auto;
+}
+.sitemap ul{
+    width: 240px;
+    margin: auto;
+    margin-top: 400px;
+}
+.sitemap ul li a{
+    font-size: 20px;
+    font-weight: 500;
+    width: 200px;
+    display: block;
+    color: #9a9a9a;
+    line-height: 50px;
+    transition: all 0.3s ease;
+/*     outline: solid 1px red; */
+}
+.sitemap ul li{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    color: #fff;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+/*     outline: solid 1px red; */
+}
+#active:checked ~ .wrapper{
+    clip-path: circle(75%);
+}
+
+.wrapper ul li a:hover{
+    color: #43FF5C;
+}
+/* main */
+.category{
+    width: 1400px;
+    margin: auto;
+    padding-top: 100px;
+}
+.category h1{
+    font-size: 40px;
+    color: #595959;
+}
+.category h1 span{
+    color: #01F020;
+}
+.category ul{
+    width: 430px;
+    display: flex;
+    justify-content: space-between;
+}
+.category ul a{
+    color: #595959;
+    text-align: center;
+    margin-top: 30px;
+}
+.category ul p{
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.category ul a:nth-child(2){
+    color: #01F020;
+}
+.category ul li .circle{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #2e2e2e;
+    position: relative;
+}
+.category ul li .circle img{
+    width: 50px;
+    position: absolute;
+    margin: auto;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+/* 타입 카테고리 */
+.t_category{
+    border: none 0;
+    border-radius: 20px;
+    width: 850px;
+    height: 60px;
+    background-color: #282828;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: relative;
+}
+.t_category h3{
+    margin: auto 50px;
+    color: #CCCCCC;
+/*     outline: solid 1px red; */
+}
+.t_category h3::after {
+    content: "";
+    width: 1.5px;
+    height: 28px;
+    position: absolute;
+    top: 50%;
+    left: 120px;
+    transform: translateY(-50%);
+    background-color: #7C7C7C;
+}
+.t_category .t_ul{
+    width: 700px;
+    height: 40px;
+/*     outline: solid 1px red; */
+    margin: auto;
+}
+
+.t_category .t_ul li{
+/*     outline: solid 1px blue; */
+    font-weight: 600;
+    font-size: 18px;
+    margin: auto;
+}
+.t_category .t_ul li a{
+    color: #595959;
+}
+.t_category .t_ul .check a{
+    color: #01F020;
+    text-decoration: underline;
+}
+
+section{
+    background-color: #1E1E1E;
+    height: fit-content;
+}
+/* list sort */
+.pdtSortTab {
+    position: relative;
+    width: 1400px;
+    height: 30px;
+    margin: auto;
+    margin-top: 10px;
+/*     outline: solid 1px red; */
+}
+.pdtSortTab .btnListup {
+    display: inline-flex;
+    align-items: center;
+    height: 20px;
+    padding: 0 20px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #525252;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+.pdtSortTab .btnListup i {
+    margin-left: 10px;
+}
+.pdtSortTab .listSort {
+    position: absolute;
+    top: 30px; 
+    right: 0;
+    z-index: 10;
+    width: 105px;
+    padding: 10px 0;
+    background-color: #383838;
+    display: none; 
+}
+.pdtSortTab li {
+    height: 40px;
+    padding: 10px 15px;
+    list-style: none; 
+}
+.pdtSortTab li input[type='radio'] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.pdtSortTab li input[type='radio']:checked + label {
+    color: #01F020;
+}
+.pdtSortTab li label {
+    display: block;
+    height: 40px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #CCCCCC;
+}
+
+/* p */
+.product-wrapper{
+    width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.card_wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4개의 열을 동일한 크기로 설정 */
+    grid-gap: 20px; /* 그리드 사이의 간격을 설정 */
+    list-style: none;
+}
+.product-wrapper p{
+    font-size: 20px;
+    color: #525252;
+    font-weight: 600;
+}
+.product-wrapper p span{
+    font-size: 24px;
+    color: #01F020;
+}
+/* product */
+.product{
+    width: 336px;
+    height: 500px;
+    background-color: #2F2F2F;
+    border-radius: 20px;
+    position: relative;
+}
+.product a{
+    color: #fff;
+}
+
+.product i{
+    display: block;
+    text-align: right;
+    padding: 30px;
+    font-size: 20px;
+}
+.product .txt_box{
+    height: 60px;
+ /*    outline: solid 1px red; */
+    padding: 0 30px;
+    position: absolute;
+    bottom: 30px; right: 0; left: 0;
+
+}
+.product .txt_box h4{
+    font-weight: 200;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.product .txt_box h3{
+    font-weight: 400;
+    font-size: 16px;
+}
+.product .img_box img{
+    width: 200px;
+    position: absolute; 
+    margin: auto;
+    top: 15%; right: 0; left: 0;
+}
+.product .img_box img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="depth2.css">
+    <link rel="stylesheet" href="depth.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/83ff0e0a6f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <header>
+            <div class="inner">
+                <h1 class="logo"><a href="index.html"><img src="img/logo_W.png" alt=""></a></h1>
+                    <ul class="depth01">
+                        <li><a href="">정품등록</a></li>
+                        <li><a href="nextPage.html">알아보기</a></li>
+                        <li><a href="">제품</a></li>
+                        <li><a href="">질레트 소개</a></li>
+                    </ul>
+                    <ul class="util_menu">
+                        <li class="heart">
+                            <button><i class="fa-solid fa-heart" style="color: #ffffff;"></i></button>
+                        </li>
+                        <li class="search_header">
+                            <button><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i></button>
+                        </li>
+                        <li class="sitemap_btn">
+                            <a href="#"><i>☰</i></a>
+                        </li>
+                    </ul>
+            </div>
+        </header>
+        <script src="index.js"></script>
+        <input type="checkbox" id="active">
+        <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+        <div class="wrapper">
+            <div class="sitemap">
+        <ul>
+            <li>알아보기</li>
+            <li><a href="#">면도 팁</a></li>
+            <li><a href="#">스킨 케어</a></li>
+            <li><a href="#">스타일링</a></li>
+            <li><a href="#">바디 면도 및 트리밍</a></li>
+        </ul>
+        <ul>
+            <li>컬렉션별</li>
+            <li><a href="#">스킨텍</a></li>
+            <li><a href="#">퓨전 5</a></li>
+            <li><a href="#">마하 3</a></li>
+            <li><a href="#">질레트 히티드레이저</a></li>
+            <li><a href="#">일회용 면도기</a></li>
+        </ul>
+        <ul>
+            <li>유형별</li>
+            <li><a href="#">모든 면도기</a></li>
+            <li><a href="#">교체용 면도날</a></li>
+            <li><a href="#">젤, 크림, 쉐이브</a></li>
+            <li><a href="#">모든 제품</a></li>
+        </ul>
+        <ul>
+            <li>질레트 소개</li>
+            <li><a href="#">질레트 역사</a></li>
+            <li><a href="#">환경 지속 가능성</a></li>
+            <li><a href="#">사회 지속 가능성</a></li>
+            <li><a href="#">자주하는 질문</a></li>
+            <li><a href="#">성분 용어집</a></li>
+            <li><a href="#">질레트 리필 면도날</a></li>
+            <li><a href="#">면도기 기술</a></li>
+        </ul>
+    </div>
+        </div>
+        <!-- main -->
+        <main>
+            <div class="category">
+                <h1 data-aos="fade-up" data-aos-duration="1000">나에게 <span>적합한 제품</span> 찾기</h1>
+                <ul data-aos="fade-up" data-aos-duration="1200">
+                    <a href="nextPage.html"><li><div class="circle"><img src="img/all.png" alt=""></div> <p>전체</p></li></a>
+                    <a href="depth.html"><li><div class="circle"><img src="img/shaving-razor2.png" alt=""></div> <p>면도기</p></li></a>
+                    <a href=""><li><div class="circle"><img src="img/razor-blade.png" alt=""></div> <p>면도날</p></li></a>
+                    <a href=""><li><div class="circle"><img src="img/foam-dispenser.png" alt=""></div> <p>젤·크림·쉐이브</p></li></a>
+                </ul>
+
+                <div data-aos="fade-up" data-aos-duration="1300" class="t_category">
+                    <h3>타입</h3>
+                    <ul class="t_ul">
+                        <li><a href="depth1.html">밀착면도</a></li>
+                        <li><a href="depth2.html">스타일링</a></li>
+                        <li><a href="depth3.html">민감성피부</a></li>
+                        <li><a href="depth4.html">매몰 헤어방지</a></li>
+                        <li class="check"><a href="depth.html">까다로운 부위</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pdtSortTab">
+                <button class="btnListup">
+                    <span>추천순</span><i class="fa-solid fa-sort-down" style="color: #525252;"></i>
+                </button>
+                <ul class="listSort">
+                    <li>
+                        <input type="radio" id="sort_recommend" name="sort" value="recommend">
+                        <label for="sort_recommend">추천순</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="sort_new" name="sort" value="new">
+                        <label for="sort_new">신제품순</label>
+                    </li>
+                </ul>
+            </div>
+            <script src="death.js"></script>
+        <section>
+            <div data-aos="fade-up" data-aos-duration="1400" class="product-wrapper">
+                <div class="card_wrapper">
+                    <div class="product" data-recommend="92" data-release="20240420"><a href="">
+                            <div class="txt_box">
+                                <h4 class="type">FUSION 5</h4>
+                                <h3 class="p_name">플렉스볼 질레트 퓨전 5 프로글라이드 <br> 파워 면도기</h3>
+                            </div>
+                        <div class="img_box"><img src="img/플렉스볼 퓨전 5 프로글라이드 파워 면도기.png" alt=""></div>
+                    </a><i class="fa-solid fa-heart" style="color: #ffffff;"></i></div>
+                    <div class="product" data-recommend="98" data-release="20240402"><a href="">
+                        <div class="details">
+                            <div class="txt_box">
+                                <h4 class="type">FUSION 5</h4>
+                                <h3 class="p_name">플렉스볼 질레트 퓨전 5 프로글라이드 <br> 면도기</h3>
+                            </div>
+                        </div>
+                        <div class="img_box"><img src="img/플렉스볼 퓨전 5 프로글라이드 면도기.png" alt=""></div>
+                    </a><i class="fa-solid fa-heart" style="color: #ffffff;"></i></div>
+                </div>
+            </div>
+        </section>
+        <script src="sort.js"></script>
+        <script src="heart.js"></script>
+        </main>
+        <!-- footer -->
+        <footer>
+            <div class="inner">
+            <div class="left_box">
+                <h1><a href=""><img src="img/logo_W.png" alt=""></a></h1>
+                <ul>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">사이트맵</a></li>
+                    <li><a href="">AdChoices</a></li>
+                    <li><a href="">문의하기</a></li>
+                </ul>
+                <button class="fam_site">Family Site <i class="fa-solid fa-caret-down" style="color: #6a6a6a;"></i></button>
+                <button class="site_map">Site Map <i class="fa-solid fa-caret-down" style="color: #6a6a6a;"></i></button>
+            </div>
+            <div class="right_box">
+                <ul class="icon">
+                    <li><a href=""><i class="fa-brands fa-youtube" style="color: #6a6a6a;"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook" style="color: #6a6a6a;"></i></a></li>
+                </ul>
+                <p>© 2024 procter & Gamble All Rights Reserved.</p>
+            </div>
+        </div>
+        </footer>
+    </div> <!-- /container -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+</body>
+</html>

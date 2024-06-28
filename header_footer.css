@@ -1,0 +1,169 @@
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: black;
+}
+
+header .inner {
+    width: 70vw;
+    height: 3.25vw;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+/*     outline: solid 1px red; */
+}
+
+header .logo img {
+    width: 7.5vw;
+    padding: 1vw;
+/*     outline: solid 1px red; */
+}
+
+.depth01 {
+/*     outline: solid 1px red; */
+    width: 23.5vw;
+    display: flex;
+    justify-content: space-between;
+    float: left;
+    margin: auto;
+}
+
+.depth01 li {
+    font-size: 0.9vw;
+    cursor: pointer;
+}
+
+.util_menu {
+    width: 6vw;
+    height: 1.5vw;
+    margin: auto 0;
+/*     outline: solid 1px red; */
+}
+
+.util_menu li {
+    margin-left: 0.25vw; /* 버튼 간격 */
+    position: relative; /* 언어 메뉴를 위한 상대 위치 설정 */
+}
+
+.heart i{
+    font-size: 1.2vw;
+}
+
+.util_menu button {
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: transparent;
+    border: 0 none;
+    color: white;
+    cursor: pointer;
+}
+
+.sitemap_btn a {
+    display: inline-block;
+    width: 1.5vw;
+    height: 1.5vw;
+    text-align: center; /* 내부 아이콘 가운데 정렬 */
+    line-height: 1.5vw; /* 아이콘을 수직 가운데 정렬 (부모 요소의 높이와 동일하게 설정) */
+    color: transparent; /* 링크 색상을 투명하게 하여 아이콘 색상만 보이게 함 */
+    font-size: 0; /* 하위 요소가 부모 요소에 영향을 받지 않도록 설정 */
+}
+
+.sitemap_btn a i {
+    color: white;
+    font-size: 1.2vw;
+}
+
+/* footer */
+footer .inner {
+    width: 73.68vw; /* 1400px을 vw로 변환 */
+    height: 10.52vw; /* 200px을 vw로 변환 */
+    margin: auto 0;
+/*     outline: solid 1px rgb(0, 21, 255); */
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: #1E1E1E;
+    color: #6A6A6A;
+}
+
+footer .inner .left_box {
+    width: 25.26vw; /* 480px을 vw로 변환 */
+/*     outline: solid 1px rgb(0, 21, 255); */
+    display: block;
+    margin: auto 0;
+    margin-bottom: 0;
+}
+
+footer .inner .left_box h1 img {
+    width: 7.89vw; /* 150px을 vw로 변환 */
+}
+
+footer .inner .left_box ul {
+    width: 23.68vw; /* 450px을 vw로 변환 */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.05vw; /* 20px을 vw로 변환 */
+}
+
+footer .inner .left_box ul li a {
+    color: #6A6A6A;
+}
+
+footer .inner .left_box button {
+    width: 10.52vw; /* 200px을 vw로 변환 */
+    border: none 0;
+    border-bottom: solid 1px #6A6A6A;
+    background-color: transparent;
+    color: #6A6A6A;
+    font-size: 1.26vw; /* 24px을 vw로 변환 */
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    margin-top: 1.05vw; /* 20px을 vw로 변환 */
+}
+
+footer .inner .left_box .fam_site i {
+    font-size: 1.05vw; /* 20px을 vw로 변환 */
+    margin-left: 2.63vw; /* 50px을 vw로 변환 */
+}
+
+footer .inner .left_box .site_map i {
+    font-size: 1.05vw; /* 20px을 vw로 변환 */
+    margin-left: 4.21vw; /* 80px을 vw로 변환 */
+}
+
+footer .inner .left_box .site_map {
+    margin-left: 1.05vw; /* 20px을 vw로 변환 */
+}
+
+/* right */
+footer .inner .right_box {
+    text-align: right;
+    width: 17.89vw; /* 340px을 vw로 변환 */
+/*     outline: solid 1px rgb(0, 21, 255); */
+    margin: auto 0;
+    margin-bottom: 0;
+}
+
+footer .inner .right_box .icon {
+    width: 4.21vw; /* 80px을 vw로 변환 */
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+}
+
+footer .inner .right_box ul li i {
+    font-size: 1.57vw; /* 30px을 vw로 변환 */
+}
+
+footer .inner .right_box p {
+    font-size: 0.78vw; /* 15px을 vw로 변환 */
+    margin-top: 1.57vw; /* 30px을 vw로 변환 */
+}

@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;}
+
+    html{ scroll-behavior: smooth;}
+/* 전체 */
+.container{
+    width: 100%;
+}
+ul li{
+    list-style: none;
+    float: left;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+body{
+    color: #fff;
+    background-color: #1E1E1E;
+}
+
+section{
+    height: 1080px;
+}
+.s_inner {
+    width: 70vw;
+    height: 56.25vw; /* 16:9 비율 */
+    margin: 0 13vw;
+/*     outline: solid 1px rgb(187, 0, 255); */
+    z-index: 2;
+}
+.footer {
+    padding: 0 13vw;
+    height: 15vw;
+    /* outline: solid 1px rgb(111, 0, 255); */
+}
+
+i{
+    font-style: normal;
+}
+
+/* overlay */
+.wrapper{
+    display: none;
+    position: sticky;
+    top: -0.5vw;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: 93%;
+    clip-path: circle(1.25vw at calc(100% - 2.25vw) 2.25vw);
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.wrapper.active {
+    display: block;
+    clip-path: circle(75%);
+}
+
+.sitemap{
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    height: 56.25vw;
+    margin: auto;
+}
+.sitemap ul{
+    width: 12vw;
+    margin: auto;
+    margin-top: 20vw;
+}
+.sitemap ul li a{
+    font-size: 1vw;
+    font-weight: 500;
+    width: 10vw;
+    display: block;
+    color: #9a9a9a;
+    line-height: 2.5vw;
+    transition: all 0.3s ease;
+/*     outline: solid 1px red; */
+}
+.sitemap ul li{
+    text-decoration: none;
+    font-size: 1.5vw;
+    font-weight: 500;
+    padding: 0.25vw 1.5vw;
+    color: #fff;
+    position: relative;
+    line-height: 2.5vw;
+    transition: all 0.3s ease;
+/*     outline: solid 1px red; */
+}
+#active:checked ~ .wrapper{
+    clip-path: circle(75%);
+}
+
+.wrapper ul li a:hover{
+    color: #43FF5C;
+}
+/* main */
+.category{
+    width: 1400px;
+    margin: auto;
+    padding-top: 100px;
+}
+.category h1{
+    font-size: 40px;
+    color: #595959;
+}
+.category h1 span{
+    color: #01F020;
+}
+.category ul{
+    width: 430px;
+    display: flex;
+    justify-content: space-between;
+}
+.category ul a{
+    color: #595959;
+    text-align: center;
+    margin-top: 30px;
+}
+.category ul p{
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.category ul a:first-child{
+    color: #01F020;
+}
+.category ul li .circle{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #2e2e2e;
+    position: relative;
+}
+.category ul li .circle img{
+    width: 50px;
+    position: absolute;
+    margin: auto;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+section{
+    background-color: #1E1E1E;
+    height: fit-content;
+}
+
+/* 슬라이더 */
+.slider-wrapper{
+    width: 1400px;
+    margin: 40px auto;
+    position: relative;
+}
+/* 슬라이드 버튼 스타일 */
+
+.slider-wrapper button {
+    position: absolute;
+    top: 55%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #000;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.slider-wrapper .slide-next {
+    top: 55%; right: 0;
+}
+.card_wrapper{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 18px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.slider-wrapper p{
+    font-size: 20px;
+    color: #525252;
+    font-weight: 600;
+}
+.slider-wrapper p span{
+    font-size: 24px;
+    color: #01F020;
+}
+/* card */
+.card_wrapper .card{
+    margin-top: 20px;
+}
+.card{
+    width: 300px;
+    height: 420px;
+    background-color: #000;
+    border-radius: 20px;
+    position: relative;
+}
+.card:nth-child(2){
+    width: 300px;
+    height: 420px;
+    background-image: linear-gradient(to bottom left, #FFE070, #E2E2E2);
+    border-radius: 20px;
+    position: relative;
+}
+.card:nth-child(3){
+    width: 300px;
+    height: 420px;
+    background-image: linear-gradient(to bottom left, #80C2FF, #F6F6F6);
+    border-radius: 20px;
+    position: relative;
+}
+.card:nth-child(4){
+    width: 300px;
+    height: 420px;
+    background-color: #efefef;
+    border-radius: 20px;
+    position: relative;
+}
+.card:nth-child(5){
+    width: 300px;
+    height: 420px;
+    background-color: #dbdbdb;
+    border-radius: 20px;
+    position: relative;
+}
+
+.card a{
+    color: #fff;
+}
+.card .details{
+    /* outline: solid 1px rgb(0, 42, 255); */
+    display: flex;
+    justify-content: space-between;
+}
+.card .details i{
+    display: block;
+    padding: 30px 30px 0 0;
+    font-size: 20px;
+}
+.card_wrapper .card .details .txt_box{
+/*     outline: solid 1px red; */
+    margin: 30px 0 0 30px;
+}
+.card_wrapper .card .details .txt_box h4{
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+}
+.card_wrapper .card .details .txt_box h3{
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+}
+.card_wrapper .card .details .txt_box .name{
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+.card_wrapper .card .details .txt_box .txt{
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+}
+
+.card .img_box img{
+    width: 200px;
+    position: absolute; 
+    margin: auto;
+    top: 10; right: 0; left: 0;
+}
+.card .img_box img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/* product */
+.card_wrapper .product{
+    margin-top: 20px;
+}
+.intro img{
+    width: 300px;
+    height: 420px;
+    background-color: #000;
+    border-radius: 20px;
+}
+.product{
+    width: 260px;
+    height: 420px;
+    background-color: #2F2F2F;
+    border-radius: 20px;
+    position: relative;
+}
+.product a{
+    color: #fff;
+}
+
+.product i{
+    display: block;
+    text-align: right;
+    padding: 30px;
+    font-size: 20px;
+}
+.product .txt_box{
+    height: 60px;
+ /*    outline: solid 1px red; */
+    padding: 0 20px;
+    position: absolute;
+    bottom: 15px; right: 0; left: 0;
+
+}
+.product .txt_box h4{
+    font-weight: 300;
+    font-size: 12px;
+}
+.product .txt_box h3{
+    font-weight: 400;
+    font-size: 14px;
+}
+.product .img_box img{
+    width: 180px;
+    position: absolute; 
+    margin: auto;
+    top: 15%; right: 0; left: 0;
+}
+.product .img_box img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+/* benefits */
+.card_wrapper .benefits{
+    margin-top: 20px;
+}
+.benefits{
+    width: 336px;
+    height: 250px;
+    background-color: #2F2F2F;
+    border-radius: 20px;
+    position: relative;
+}
+.benefits img{
+    width: 80px;
+    position: absolute; 
+    margin: auto;
+    top: 30px; left: 30px;
+/*     outline: solid 1px red; */
+}
+
+.benefits .txt_box{
+/*     outline: solid 1px red; */
+    height: 80px;
+    position: absolute;
+    margin: auto;
+    bottom: 40px; left: 30px;
+    
+}
+.benefits .txt_box h3{
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 10px;
+}
+.benefits .txt_box h4{
+        font-weight: 300;
+        font-size: 14px;
+}
+ 
